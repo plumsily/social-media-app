@@ -1,0 +1,16 @@
+.logo h1,
+.logo i {
+  transition: all 150ms ease;
+}
+.logo:hover i,
+.logo:hover h1 {
+  color: #50d0ff !important;
+  transition: all 150ms ease;
+}
+
+.profile {
+  height: 32px;
+  width: 32px;
+  border: 2px solid #50d0ff;
+  font-weight: 500;
+}
