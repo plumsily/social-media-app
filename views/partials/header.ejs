@@ -19,6 +19,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
@@ -26,11 +30,35 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header class="container">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <a
+          href="/feed"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        >
+          <i
+            class="bi-alarm"
+            style="font-size: 2rem; color: cornflowerblue"
+          ></i>
+          <h1 class="fs-4">Journey</h1>
+        </a>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="/feed" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">Profile</a>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- <header class="container">
       <div class="text-center">
         <h1 class=""><a href="/profile">Binary Upload Boom</a></h1>
         <span>The #100Devs Social Network</span>
       </div>
-    </header>
+    </header> -->
   </body>
 </html>
