@@ -1,11 +1,40 @@
-<%- include('partials/header') -%>
+<%- include('partials/simple-header') -%>
 
-<main class="container">
+<!-- <main class="container">
     <div class="row justify-content-around mt-5">
         <a href="/login" class="col-3 btn btn-primary"> Login</a>
         <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
     </div>
-</main>
-    
+</main> -->
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-5 fw-normal lh-2 mb-5">
+        Everyone has a story. <br />
+        Share your journey!
+      </h1>
+      <p class="col-lg-10 fs-4 mb-5">
+        Day by day, we're growing. Whether it's picking up a new hobby or
+        keeping track of personal discoveries, having a place to look back
+        serves as a helpful reminder of how far we've come. It's your story -
+        enjoy it. Post it. Share it!
+      </p>
+      <div class="row gap-2 px-2">
+        <a href="/login" class="col-4 btn btn-outline-primary"> Login</a>
+        <a href="/signup" class="col-4 btn btn-primary"> Signup</a>
+      </div>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <img
+        src="/imgs/float.png"
+        alt="Illustration of person floating"
+        class="floating-img"
+      />
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <img src="/imgs/groovy.png" alt="Illustration of person dancing" />
+    </div>
+  </div>
+</div>
 
 <%- include('partials/footer') -%>

@@ -1,7 +1,10 @@
-<%- include('partials/header') -%>
+<%- include('partials/simple-header') -%>
 
 <main class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-6 d-flex justify-content-center mt-5">
+      <img src="/imgs/plant.png" alt="Illustration of person holding a plant" />
+    </div>
     <section class="col-6 mt-5">
       <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
       <div class="alert alert-danger"><%= el.msg %></div>
@@ -9,7 +12,7 @@
       messages.info.forEach( el => { %>
       <div class="alert alert-info"><%= el.msg %></div>
       <% }) %> <% } %>
-      <form action="/login" method="POST">
+      <form action="/login" method="POST" class="p-4 p-md-5 border rounded-3">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
@@ -22,7 +25,7 @@
             name="email"
           />
         </div>
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
             type="password"
@@ -31,7 +34,9 @@
             name="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="w-100 btn btn-lg btn-primary">
+          Log in
+        </button>
       </form>
     </section>
   </div>

@@ -1,10 +1,10 @@
-.logo h1,
+.logo span,
 .logo i {
   transition: all 150ms ease;
 }
 .logo:hover i,
-.logo:hover h1 {
-  color: #50d0ff !important;
+.logo:hover span {
+  color: #5678ff !important;
   transition: all 150ms ease;
 }
 
@@ -13,4 +13,17 @@
   width: 32px;
   border: 2px solid #50d0ff;
   font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #5678ff;
+  border-color: #5678ff;
+}
+.btn-outline-primary {
+  border-color: #5678ff;
+}
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  background-color: black;
+  border-color: black;
 }
