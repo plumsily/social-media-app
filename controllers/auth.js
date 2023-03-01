@@ -1,5 +1,6 @@
 const passport = require("passport");
 const validator = require("validator");
+const cloudinary = require("../middleware/cloudinary");
 const User = require("../models/User");
 
 exports.getLogin = (req, res) => {
@@ -65,7 +66,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
-exports.postSignup = (req, res, next) => {
+exports.postSignup = async (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: "Please enter a valid email address." });
@@ -84,10 +85,24 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
+  // Upload image to cloudinary
+  let result = {};
+  if (req.file) {
+    result = await cloudinary.uploader.upload(req.file.path);
+  } else {
+    result = {
+      secure_url:
+        "https://res.cloudinary.com/dgga2n5e1/image/upload/v1677651782/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM_u7klru.jpg",
+      public_id: "360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM_u7klru",
+    };
+  }
+
   const user = new User({
     userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
+    image: result.secure_url,
+    cloudinaryId: result.public_id,
   });
 
   User.findOne(

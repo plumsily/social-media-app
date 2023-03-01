@@ -8,7 +8,12 @@
       messages.info.forEach( el => { %>
       <div class="alert alert-info"><%= el.msg %></div>
       <% }) %> <% } %>
-      <form action="/signup" method="POST" class="p-4 p-md-5 border rounded-3">
+      <form
+        action="/signup"
+        method="POST"
+        enctype="multipart/form-data"
+        class="p-4 p-md-5 border rounded-3"
+      >
         <div class="mb-3">
           <label for="userName" class="form-label">User Name</label>
           <input
@@ -19,8 +24,17 @@
           />
         </div>
         <div class="mb-3">
+          <label for="imgUpload" class="form-label">Profile Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="imageUpload"
+            name="file"
+          />
+        </div>
+        <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
+            >Email Address</label
           >
           <input
             type="email"
@@ -41,6 +55,9 @@
             id="password"
             name="password"
           />
+          <div id="passwordHelp" class="form-text">
+            Password must be at least 8 characters long.
+          </div>
         </div>
         <div class="mb-5">
           <label for="confirmPassword" class="form-label"

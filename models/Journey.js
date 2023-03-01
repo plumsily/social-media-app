@@ -5,14 +5,6 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  image: {
-    type: String,
-    require: true,
-  },
-  cloudinaryId: {
-    type: String,
-    require: true,
-  },
   caption: {
     type: String,
     required: true,
@@ -25,14 +17,16 @@ const PostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  journeyId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Journey",
-  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
+  image: {
+    type: String,
+  },
+  cloudinaryId: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Journey", PostSchema);
