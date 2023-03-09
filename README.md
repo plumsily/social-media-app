@@ -1,20 +1,12 @@
-# Install
+# Social Media Full Stack App
 
-`npm install`
+Structured boilerplate with Passport user authentication, Mongoose, Cloudinary media APIs. Users can login and signup via Passport local strategy, and post pictures. Built with MVC architecture.
 
----
+## Objectives
 
-# Things to add
+This project mainly serves to understand the following:
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
-
----
-
-# Run
-
-`npm start`
+1. Familiarity with MVC and routes for HTTP requests
+2. Integration with Cloudinary for media handling
+3. Utilizing Models with Mongoose/MongoDB to structure content and data
+4. Connecting to frontend views
